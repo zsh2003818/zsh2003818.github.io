@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/maps/world.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/maps/china.js"></script>
+
+    
+</head>
+<body >
+            <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: block;
+        }
+
+        .chart-container:nth-child(n+2) {
+            display: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, 'c3e15de0a144425493912ab0d8ae7516')">1979</button>
+            <button class="tablinks" onclick="showChart(event, 'dbf842b4725740afa9779f5ff3227cbb')">1992</button>
+    </div>
+
+    <div class="box">
+                <div id="c3e15de0a144425493912ab0d8ae7516" class="chart-container" style="width:1920px; height:1080px; "></div>
+    <script>
+            document.getElementById('c3e15de0a144425493912ab0d8ae7516').style.width = document.getElementById('c3e15de0a144425493912ab0d8ae7516').parentNode.clientWidth + 'px';
+        var chart_c3e15de0a144425493912ab0d8ae7516 = echarts.init(
+            document.getElementById('c3e15de0a144425493912ab0d8ae7516'), 'white', {renderer: 'canvas'});
+        var option_c3e15de0a144425493912ab0d8ae7516 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "yellow",
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "effectScatter",
+            "coordinateSystem": "geo",
+            "showEffectOn": "render",
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "symbolSize": 5,
+            "data": [
+                {
+                    "name": "\u5317\u4eac",
+                    "value": [
+                        116.407526,
+                        39.90403,
+                        50
+                    ]
+                },
+                {
+                    "name": "Washington, D.C.",
+                    "value": [
+                        -77.0369,
+                        38.9072,
+                        50
+                    ]
+                },
+                {
+                    "name": "Atlanta",
+                    "value": [
+                        -84.3877,
+                        33.7488,
+                        50
+                    ]
+                },
+                {
+                    "name": "Houston",
+                    "value": [
+                        -95.3698,
+                        29.7604,
+                        50
+                    ]
+                },
+                {
+                    "name": "Seattle",
+                    "value": [
+                        -122.3328,
+                        47.6061,
+                        50
+                    ]
+                },
+                {
+                    "name": "Tokyo",
+                    "value": [
+                        139.65,
+                        35.6764,
+                        50
+                    ]
+                }
+            ],
+            "label": {
+                "show": false,
+                "margin": 8
+            }
+        },
+        {
+            "type": "lines",
+            "coordinateSystem": "geo",
+            "zlevel": 3,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "blue",
+                "symbol": "arrow",
+                "symbolSize": 10
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 10,
+            "data": [
+                {
+                    "name": "\u5317\u4eac->Washington, D.C.",
+                    "coords": [
+                        [
+                            116.407526,
+                            39.90403
+                        ],
+                        [
+                            -77.0369,
+                            38.9072
+                        ]
+                    ]
+                },
+                {
+                    "name": "Washington, D.C.->Atlanta",
+                    "coords": [
+                        [
+                            -77.0369,
+                            38.9072
+                        ],
+                        [
+                            -84.3877,
+                            33.7488
+                        ]
+                    ]
+                },
+                {
+                    "name": "Atlanta->Houston",
+                    "coords": [
+                        [
+                            -84.3877,
+                            33.7488
+                        ],
+                        [
+                            -95.3698,
+                            29.7604
+                        ]
+                    ]
+                },
+                {
+                    "name": "Houston->Seattle",
+                    "coords": [
+                        [
+                            -95.3698,
+                            29.7604
+                        ],
+                        [
+                            -122.3328,
+                            47.6061
+                        ]
+                    ]
+                },
+                {
+                    "name": "Seattle->Tokyo",
+                    "coords": [
+                        [
+                            -122.3328,
+                            47.6061
+                        ],
+                        [
+                            139.65,
+                            35.6764
+                        ]
+                    ]
+                },
+                {
+                    "name": "Tokyo->\u5317\u4eac",
+                    "coords": [
+                        [
+                            139.65,
+                            35.6764
+                        ],
+                        [
+                            116.407526,
+                            39.90403
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.4,
+                "type": "solid"
+            },
+            "label": {
+                "show": false,
+                "margin": 8
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "",
+                ""
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Deng's Diplomatic Visit",
+            "target": "blank",
+            "subtext": "1979",
+            "subtarget": "blank",
+            "right": "0px",
+            "top": "50px",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "geo": {
+        "map": "world",
+        "roam": true,
+        "aspectScale": 0.75,
+        "nameProperty": "name",
+        "selectedMode": false,
+        "emphasis": {}
+    }
+};
+        chart_c3e15de0a144425493912ab0d8ae7516.setOption(option_c3e15de0a144425493912ab0d8ae7516);
+    </script>
+                <div id="dbf842b4725740afa9779f5ff3227cbb" class="chart-container" style="width:1920px; height:1080px; "></div>
+    <script>
+            document.getElementById('dbf842b4725740afa9779f5ff3227cbb').style.width = document.getElementById('dbf842b4725740afa9779f5ff3227cbb').parentNode.clientWidth + 'px';
+        var chart_dbf842b4725740afa9779f5ff3227cbb = echarts.init(
+            document.getElementById('dbf842b4725740afa9779f5ff3227cbb'), 'white', {renderer: 'canvas'});
+        var option_dbf842b4725740afa9779f5ff3227cbb = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "yellow",
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "effectScatter",
+            "coordinateSystem": "geo",
+            "showEffectOn": "render",
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            },
+            "symbolSize": 8,
+            "data": [
+                {
+                    "name": "\u5317\u4eac",
+                    "value": [
+                        116.407526,
+                        39.90403,
+                        80
+                    ]
+                },
+                {
+                    "name": "\u6b66\u6c49",
+                    "value": [
+                        114.31,
+                        30.52,
+                        60
+                    ]
+                },
+                {
+                    "name": "\u957f\u6c99",
+                    "value": [
+                        113,
+                        28.21,
+                        60
+                    ]
+                },
+                {
+                    "name": "\u6df1\u5733",
+                    "value": [
+                        114.07,
+                        22.62,
+                        40
+                    ]
+                },
+                {
+                    "name": "\u73e0\u6d77",
+                    "value": [
+                        113.52,
+                        22.3,
+                        40
+                    ]
+                },
+                {
+                    "name": "\u987a\u5fb7",
+                    "value": [
+                        113.15,
+                        22.5,
+                        40
+                    ]
+                },
+                {
+                    "name": "\u5e7f\u5dde",
+                    "value": [
+                        113.23,
+                        23.16,
+                        60
+                    ]
+                },
+                {
+                    "name": "\u9e70\u6f6d",
+                    "value": [
+                        117.03,
+                        28.14,
+                        40
+                    ]
+                },
+                {
+                    "name": "\u4e0a\u6d77",
+                    "value": [
+                        121.473701,
+                        31.230416,
+                        60
+                    ]
+                },
+                {
+                    "name": "\u5357\u4eac",
+                    "value": [
+                        118.78,
+                        32.04,
+                        60
+                    ]
+                },
+                {
+                    "name": "\u868c\u57e0",
+                    "value": [
+                        117.21,
+                        32.56,
+                        40
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "lines",
+            "name": "Jan. 18",
+            "coordinateSystem": "geo",
+            "zlevel": 3,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "yellow",
+                "symbol": "arrow",
+                "symbolSize": 3
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 12,
+            "data": [
+                {
+                    "name": "\u5317\u4eac->\u6b66\u6c49",
+                    "coords": [
+                        [
+                            116.407526,
+                            39.90403
+                        ],
+                        [
+                            114.31,
+                            30.52
+                        ]
+                    ]
+                },
+                {
+                    "name": "\u6b66\u6c49->\u957f\u6c99",
+                    "coords": [
+                        [
+                            114.31,
+                            30.52
+                        ],
+                        [
+                            113,
+                            28.21
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.2,
+                "type": "solid"
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Jan. 20",
+            "coordinateSystem": "geo",
+            "zlevel": 4,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "green",
+                "symbol": "arrow",
+                "symbolSize": 3
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 12,
+            "data": [
+                {
+                    "name": "\u957f\u6c99->\u6df1\u5733",
+                    "coords": [
+                        [
+                            113,
+                            28.21
+                        ],
+                        [
+                            114.07,
+                            22.62
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.2,
+                "type": "solid"
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Jan. 23",
+            "coordinateSystem": "geo",
+            "zlevel": 5,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "blue",
+                "symbol": "arrow",
+                "symbolSize": 3
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 12,
+            "data": [
+                {
+                    "name": "\u6df1\u5733->\u73e0\u6d77",
+                    "coords": [
+                        [
+                            114.07,
+                            22.62
+                        ],
+                        [
+                            113.52,
+                            22.3
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.2,
+                "type": "solid"
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Jan. 29",
+            "coordinateSystem": "geo",
+            "zlevel": 6,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "red",
+                "symbol": "arrow",
+                "symbolSize": 3
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 12,
+            "data": [
+                {
+                    "name": "\u73e0\u6d77->\u987a\u5fb7",
+                    "coords": [
+                        [
+                            113.52,
+                            22.3
+                        ],
+                        [
+                            113.15,
+                            22.5
+                        ]
+                    ]
+                },
+                {
+                    "name": "\u987a\u5fb7->\u5e7f\u5dde",
+                    "coords": [
+                        [
+                            113.15,
+                            22.5
+                        ],
+                        [
+                            113.23,
+                            23.16
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.2,
+                "type": "solid"
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Jan. 30",
+            "coordinateSystem": "geo",
+            "zlevel": 7,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "purple",
+                "symbol": "arrow",
+                "symbolSize": 3
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 12,
+            "data": [
+                {
+                    "name": "\u5e7f\u5dde->\u9e70\u6f6d",
+                    "coords": [
+                        [
+                            113.23,
+                            23.16
+                        ],
+                        [
+                            117.03,
+                            28.14
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.2,
+                "type": "solid"
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Jan. 31",
+            "coordinateSystem": "geo",
+            "zlevel": 8,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "orange",
+                "symbol": "arrow",
+                "symbolSize": 3
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 12,
+            "data": [
+                {
+                    "name": "\u9e70\u6f6d->\u4e0a\u6d77",
+                    "coords": [
+                        [
+                            117.03,
+                            28.14
+                        ],
+                        [
+                            121.473701,
+                            31.230416
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.2,
+                "type": "solid"
+            }
+        },
+        {
+            "type": "lines",
+            "name": "Feb. 20",
+            "coordinateSystem": "geo",
+            "zlevel": 9,
+            "progressive": 400,
+            "progressiveThreshold": 3000,
+            "effect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4,
+                "color": "pink",
+                "symbol": "arrow",
+                "symbolSize": 3
+            },
+            "symbol": [
+                "none",
+                "arrow"
+            ],
+            "polyline": false,
+            "large": false,
+            "largeThreshold": 2000,
+            "symbolSize": 12,
+            "data": [
+                {
+                    "name": "\u4e0a\u6d77->\u5357\u4eac",
+                    "coords": [
+                        [
+                            121.473701,
+                            31.230416
+                        ],
+                        [
+                            118.78,
+                            32.04
+                        ]
+                    ]
+                },
+                {
+                    "name": "\u5357\u4eac->\u868c\u57e0",
+                    "coords": [
+                        [
+                            118.78,
+                            32.04
+                        ],
+                        [
+                            117.21,
+                            32.56
+                        ]
+                    ]
+                }
+            ],
+            "lineStyle": {
+                "show": true,
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0.2,
+                "type": "solid"
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "",
+                "Jan. 18",
+                "Jan. 20",
+                "Jan. 23",
+                "Jan. 29",
+                "Jan. 30",
+                "Jan. 31",
+                "Feb. 20"
+            ],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "formatter": function (params) {        return params.name + ' : ' + params.value[2];    },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "Deng's Southern Tour",
+            "target": "blank",
+            "subtext": "1992",
+            "subtarget": "blank",
+            "right": "0px",
+            "top": "50px",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "geo": {
+        "map": "china",
+        "roam": true,
+        "aspectScale": 0.75,
+        "nameProperty": "name",
+        "selectedMode": false,
+        "itemStyle": {
+            "color": "lightgrey",
+            "borderColor": "black"
+        },
+        "emphasis": {}
+    }
+};
+        chart_dbf842b4725740afa9779f5ff3227cbb.setOption(option_dbf842b4725740afa9779f5ff3227cbb);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
